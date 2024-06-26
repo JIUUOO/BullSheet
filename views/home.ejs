@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BullSheet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css"
+    />
   </head>
   <body>
-    <h1>That's a total BullSheet!!!</h1>
     <div class="container is-flex is-justify-content-center">
       <div class="is-flex is-flex-direction-column">
         <h1 class="is-size-1">BullSheet!</h1>
-        <div class="field">
-          <label class="label">Desired budget:</label>
+        <form action="/sheet" method="POST" class="field">
+          <label for="selection" class="label">Desired budget:</label>
           <div class="control">
             <div class="select">
-              <select>
+              <select id="selection" name="budget">
                 <option>10%</option>
                 <option>20%</option>
                 <option>30%</option>
@@ -22,8 +25,9 @@
                 <option>50%</option>
               </select>
             </div>
+            <button class="button">Submit</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </body>

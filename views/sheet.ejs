@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BullSheet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="container is-flex is-justify-content-center">
+      <div class="is-flex is-flex-direction-column">
+        <h1 class="is-size-1">
+          Your desired budget is
+          <span class="has-text-weight-bold has-text-primary">
+            <%= budget %>
+          </span>
+        </h1>
+        <h2 class="is-size-2">
+          I gave it a little touch, which became
+          <span class="has-text-weight-bold has-text-info">
+            <%= `${(parseInt(budget) * 0.044).toFixed(2)}%` %>
+          </span>
+        </h2>
+        <button class="button ml-auto"><a href="/">Go Back</a></button>
+      </div>
+    </div>
+  </body>
+</html>
